@@ -1,0 +1,11 @@
+# Made by tools/prepare-deploy.js; rebuilt every time
+dist/
+
+# Old colour theme kept for reference on this computer only
+tools/backup-green-blue-theme/
+
+# Computer clutter
+node_modules/
+.DS_Store
+Thumbs.db
+*.log

@@ -1,0 +1,9 @@
+{
+  "liveServer.settings.root": "/",
+  "liveServer.settings.port": 5500,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "editor.wordWrap": "on",
+  "editor.formatOnSave": false,
+  "files.autoSave": "afterDelay",
+  "files.associations": { "*.html": "html" }
+}

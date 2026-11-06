@@ -1108,6 +1108,22 @@ p, li, dd, .lead, .fp-tagline, .detail-title .sub, .cb-msg {
 .uf input::placeholder { color: #8f9b97; }
 .uf input:focus { outline: none; border-bottom-color: var(--green); }
 .uf input:hover { border-bottom-color: var(--green); }
+.uf input[type="date"] {
+  cursor: pointer;
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+.uf input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  filter: invert(32%) sepia(20%) saturate(750%) hue-rotate(95deg) brightness(90%);
+  opacity: .8;
+  padding: 4px;
+  transition: transform .2s ease, opacity .2s ease;
+}
+.uf input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+  transform: scale(1.15);
+}
 .form-submit { width: 100%; justify-content: center; margin-top: 6px; padding-block: 16px; }
 .form-card .form-status { margin-top: 4px; }
 .join-prompt { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 18px 4px 0; border-top: 1px solid rgba(249,247,242,.25); }

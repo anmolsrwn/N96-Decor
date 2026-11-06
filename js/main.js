@@ -1008,6 +1008,16 @@
   }
   /* ---------- Contact form: sent straight to N96.config.formEmail (no email app, no WhatsApp) ---------- */
   $all("form[data-formsubmit]").forEach(function (form) {
+    var dateInp = form.querySelector('input[type="date"]');
+    if (dateInp) {
+      try {
+        var today = new Date().toISOString().split("T")[0];
+        dateInp.min = today;
+      } catch (err) {}
+      dateInp.addEventListener("click", function () {
+        try { if (this.showPicker) this.showPicker(); } catch (err) {}
+      });
+    }
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       var st = statusBox(form), btn = form.querySelector('button[type="submit"]');

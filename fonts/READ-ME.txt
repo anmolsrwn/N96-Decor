@@ -1,0 +1,35 @@
+PUT YOUR FONT FILES IN THIS FOLDER
+==================================
+
+Two paid fonts are used:
+  • "The Seasons"  → the N96 DECOR name in the header and footer
+                     file name: the-seasons.woff2 (or .woff / .otf / .ttf)
+  • "Brown Sugar"  → all other headings
+                     file name: brown-sugar.woff2 (or .woff / .otf / .ttf)
+
+Details for The Seasons below (Brown Sugar works exactly the same way,
+just use the file name brown-sugar.woff2).
+
+
+"The Seasons" is a paid font (it is not free on Google Fonts), so it can't be
+included here. Once you have the font file, put it in this folder and rename it to:
+
+    the-seasons.woff2      (best)   or
+    the-seasons.woff       or
+    the-seasons.otf        or
+    the-seasons.ttf
+
+Any ONE of these works. Save, refresh the browser, and "N96 DECOR" in the
+header switches to The Seasons.
+
+Until the file is here, the heading uses Cormorant Garamond (a similar elegant
+serif), so the site never looks broken.
+
+Where to get it:
+- Buy a web licence from the font's seller (search "The Seasons font" on
+  Creative Market or the designer's site). Make sure the licence covers
+  website ("web font") use.
+- If you only have an .otf or .ttf, convert it to .woff2 for faster loading with
+  a free converter such as https://cloudconvert.com/otf-to-woff2
+
+Note: the font in Canva cannot be downloaded from Canva for use on a website.

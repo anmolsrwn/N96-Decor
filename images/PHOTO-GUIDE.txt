@@ -1,0 +1,46 @@
+N96 DECOR — WHERE TO PUT YOUR PHOTOS
+=====================================
+
+Replace a photo: put your new photo in the same folder with the SAME file name.
+Add a photo: use the next free number (e.g. 7.jpg, 8.jpg ...).
+Always use .jpg, lowercase names, no spaces. Compress first (squoosh.app).
+
+images/
+├── hero/            Home page slider (landscape, 2000 x 1125 px)
+│                    slide-1.jpg ... slide-6.jpg   (add slide-7.jpg + one line in js/data.js)
+│
+├── about/           Home page "About" portrait (portrait 4:5, 1200 x 1500 px)
+│                    portrait.jpg
+│
+├── team/            Founder photos (portrait 4:5, 900 x 1125 px)
+│                    anubhuti.jpg, naghmi.jpg
+│
+├── services/        One photo per service on the Services page
+│                    wedding-decor.jpg, florals.jpg, set-design.jpg,
+│                    personalised-details.jpg, pre-wedding.jpg, intimate-events.jpg
+│
+├── projects/        ONE FOLDER PER PROJECT. Folder name = project id in js/data.js
+│   ├── st-regis-wedding/      1.jpg (cover) ... up to 10.jpg
+│   ├── jw-wedding/
+│   ├── jw-welcome-lunch/
+│   ├── jw-cocktail/
+│   ├── jaypee-wedding/
+│   ├── raffles-mehendi/
+│   ├── private-farm-lunch/
+│   ├── sample-birthday/       EMPTY — add photos of a real birthday here
+│   ├── sample-corporate/      EMPTY — add photos of a real corporate event here
+│   ├── sample-engagement/     EMPTY
+│   ├── sample-anniversary/    EMPTY
+│   └── sample-sangeet/        EMPTY
+│        (rename these folders AND the id in js/data.js together when you add real projects)
+│
+├── gallery/         Extra gallery photos not linked to a project
+│                    (list each one in N96.galleryExtras in js/data.js)
+│
+└── brand/           Logo, favicon, striped background (don't change names)
+
+Every project photo is shown automatically on its project page AND in the Gallery.
+
+While you work in VS Code (Live Server), every empty photo spot shows a dashed
+"Add photo here" box with the exact file name to use. On the live website,
+empty spots are hidden automatically.

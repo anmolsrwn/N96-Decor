@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>N96 Decor | Wedding Decor, Florals & Set Design</title>
+  <meta name="description" content="N96 Decor designs meaningful, personalised weddings: wedding decor, florals and set design across India.">
+  <link rel="icon" href="images/brand/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Italiana&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+<div class="sheet">
+  <header id="site-header"></header>
+
+  <main>
+    <!-- HERO SLIDER: photos are set in js/data.js (heroSlides) -->
+    <section class="hero" id="hero" aria-label="Featured celebrations">
+      <div class="hero-caption" aria-live="polite"></div>
+      <div class="hero-content">
+        <div class="wrap">
+          <h1>Making Meaningful Celebrations</h1>
+          <div class="hero-actions">
+            <a class="btn btn--light" href="#projects">View Projects <span class="arrow">→</span></a>
+            <a class="btn btn--hero-ghost" href="#contact">Book a Meeting <span class="arrow">→</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-dots"></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="wrap">
+        <div class="about-grid">
+          <!-- photo arch: changes every 3 seconds (founders first, then event photos).
+               Edit the list in js/data.js → N96.aboutSlides -->
+          <div class="about-portrait">
+            <div class="about-slides" id="about-slides" aria-label="Our founders and our work">
+              <img class="is-on" src="images/team/founders-mirror.jpg" alt="Anubhuti Jain and Naghmi Hamrapurkar, founders of N96 Decor">
+            </div>
+          </div>
+          <div class="about-card">
+            <img class="mark" src="images/brand/logo-mark.png" alt="">
+            <p class="about-lead">We design sophisticated luxury weddings with details that feel unmistakably yours, from a favourite poem at the dinner table to your dog on every coaster.</p>
+            <div class="values"><span>Refined Luxury</span><span>Promises Kept</span><span>Personal Design</span><span>Integrity</span></div>
+            <a class="btn" href="founders.html">Meet the founders <span class="arrow">→</span></a>
+          </div>
+        </div>
+
+        <!-- VENUES WE'VE WORKED AT: map (edit cities in js/data.js → N96.cities) -->
+        <div class="venue-map-section" id="venues">
+          <div class="venues-head">
+            <span class="eyebrow">Destination weddings</span>
+            <h2>Venues we've worked at</h2>
+            <p>From palaces in Rajasthan to the beaches of Goa, and across the sea to Cyprus. Tap a city to see what we created there.</p>
+          </div>
+          <figure class="map-card map-card--single">
+            <div class="wmap" id="wmap"></div>
+            <figcaption><span>Worldwide</span> Tap a place on the map to see the celebrations there</figcaption>
+          </figure>
+          <ul class="city-list" id="city-list"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section section--sage" id="projects">
+      <div class="wrap">
+        <div class="section-head">
+          <div><span class="eyebrow">Selected work</span><h2>Our Projects</h2></div>
+          <p>Weddings, pre-wedding functions and private celebrations we have designed across India.</p>
+        </div>
+        <div class="project-grid" id="home-projects"></div>
+        <div class="center mt-l"><a class="btn" href="projects.html">View more projects <span class="arrow">→</span></a></div>
+      </div>
+    </section>
+
+    <!-- STATEMENT: founders' quote (text left, founders' photo right). Change the photo: images/team/founders-quote.jpg -->
+    <section class="statement" aria-label="A note from our founders">
+      <div class="wrap">
+        <div class="statement-box statement-box--founders">
+          <div class="quote-text">
+            <h2 class="quote">&ldquo;The way a space is designed changes how people come together.&rdquo;</h2>
+            <p class="quote-by">&mdash; Anubhuti &amp; Naghmi</p>
+            <p>We think about where guests pause when they arrive, where they settle into conversation, and how the room draws everyone in when the ceremony begins.</p>
+            <img class="quote-mark" src="images/brand/logo-mark.png" alt="">
+          </div>
+          <figure class="quote-photo">
+            <!-- the two founder photos fade into each other every 3 seconds (same photos as the Meet the Founders page) -->
+            <div class="quote-slides" id="quote-slides">
+              <img class="is-on" src="images/team/anubhuti-portrait.jpg" alt="Anubhuti Jain, co-founder of N96 Decor" data-name="Anubhuti Jain">
+              <img src="images/team/naghmi-portrait.jpg" alt="Naghmi Hamrapurkar, co-founder of N96 Decor" data-name="Naghmi Hamrapurkar">
+            </div>
+            <figcaption id="quote-name">Anubhuti Jain</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+        <!-- GALLERY (16 photos that shuffle automatically; photos come from all projects) -->
+    <section class="section" id="gallery">
+      <div class="wrap">
+        <div class="section-head">
+          <div><span class="eyebrow">Gallery</span><h2>Moments we made</h2></div>
+          <a class="btn btn--ghost" href="gallery.html">View full gallery <span class="arrow">→</span></a>
+        </div>
+        <div class="home-gallery" id="home-gallery" aria-label="Photos from our celebrations"></div>
+      </div>
+    </section>
+    <!-- CONTACT (the menu "Contact" link scrolls here) -->
+    <section class="contact-hero" id="contact">
+      <!-- faint diagonal brand words in the background (filled by js/main.js) -->
+      <div class="words-bg" aria-hidden="true"></div>
+
+      <div class="wrap contact-hero-grid">
+        <div class="contact-intro">
+          <span class="eyebrow">Hello!</span>
+          <h2>Let's make your celebration meaningful.</h2>
+          <p>Leave in the details, we will get in touch.</p>
+          <div class="join-prompt">
+            <p>If you are looking to be a part of the team, get in touch.</p>
+            <a class="btn btn--light" href="join.html">Join us <span class="arrow">→</span></a>
+          </div>
+        </div>
+
+        <div class="contact-side">
+          <!-- ENQUIRY FORM: sent straight to the email in js/data.js (formEmail) via FormSubmit.
+               First submission sends an "Activate" email to that inbox; click it once. See README section 9. -->
+          <form class="form-card" name="enquiry" data-formsubmit data-subject="New enquiry from the N96 Decor website">
+            <p class="hp"><label>Leave this empty <input name="_honey" tabindex="-1" autocomplete="off"></label></p>
+
+            <div class="uf"><label for="e-name">Name</label><input id="e-name" name="name" placeholder="Full name" required autocomplete="name"></div>
+            <div class="uf"><label for="e-spouse">Spouse</label><input id="e-spouse" name="spouse" placeholder="Partner's full name"></div>
+            <div class="uf"><label for="e-contact">Phone</label><input id="e-contact" name="phone" type="tel" inputmode="tel" placeholder="+91" required autocomplete="tel"></div>
+            <div class="uf"><label for="e-date">Date</label><input id="e-date" name="date" placeholder="Date or month of the celebration"></div>
+            <div class="uf"><label for="e-venue">Venue</label><input id="e-venue" name="venue" placeholder="Venue and city"></div>
+            <div class="uf"><label for="e-functions">Functions</label><input id="e-functions" name="functions" placeholder="Mehendi, Haldi, Sangeet, Wedding…"></div>
+            <button class="btn form-submit" type="submit">Submit</button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+</div>
+<script src="js/data.js"></script>
+<script src="js/map-shape.js"></script>
+<script src="js/main.js"></script>
+<script src="js/chatbot-answers.js"></script>
+<script src="js/chatbot.js"></script>
+</body>
+</html>

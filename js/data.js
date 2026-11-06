@@ -24,7 +24,7 @@ N96.config = {
   formEmail: "n96decor@gmail.com",
   // OPTIONAL backup service: paste your Web3Forms access key here (from web3forms.com).
   // When filled in, the contact form uses Web3Forms instead of FormSubmit (no activation link needed).
-  web3formsKey: "",
+  web3formsKey: "086ec777-0b6e-4b33-8169-c02693f0e31b",
   phones: ["+91 99909 60100", "+91 87703 41040"],
   // TODO: confirm this is your exact Instagram handle
   instagram: "https://www.instagram.com/n96_decor?dlrf=dGh5Z3Jwdzg5dzdu",

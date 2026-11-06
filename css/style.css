@@ -801,11 +801,6 @@ p { margin: 0; }
 }
 .founder-profile:nth-child(even) .fp-photo::before { inset: -16px -16px 16px 16px; }
 .fp-photo img { position: relative; z-index: 1; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--arch); transition: transform .5s ease, box-shadow .5s ease; }
-.fp-role {
-  position: absolute; z-index: 2; left: 50%; bottom: -18px; transform: translateX(-50%); white-space: nowrap;
-  background: var(--green); color: var(--cream); padding: 10px 20px;
-  font-size: .68rem; letter-spacing: .22em; text-transform: uppercase; font-weight: 700;
-}
 .fp-text { min-width: 0; }
 .fp-text h2 { font-family: var(--font-caps); font-weight: 400; text-transform: uppercase; letter-spacing: .14em; font-size: clamp(2rem, 4.4vw, 3.4rem); margin: 10px 0 10px; }
 .fp-tagline { font-family: var(--font-display); font-style: italic; font-size: clamp(1.35rem, 2.6vw, 1.8rem); color: var(--muted); margin-bottom: 24px; line-height: 1.35; }

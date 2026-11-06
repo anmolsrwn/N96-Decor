@@ -804,7 +804,6 @@ N96.founders = [
   {
     id: "anubhuti",
     name: "Anubhuti Jain",
-    role: "Co-founder & Creative Director",
     eyebrow: "Creative Ninja & Co-founder",      // small line above the name
     photo: "images/team/anubhuti-portrait.jpg",
     paragraphs: [
@@ -820,7 +819,6 @@ N96.founders = [
   {
     id: "naghmi",
     name: "Naghmi Hamrapurkar",
-    role: "Co-founder & Design and Production Director",
     eyebrow: "Go Getter & Co-founder",           // small line above the name
     photo: "images/team/naghmi-portrait.jpg",
     paragraphs: [

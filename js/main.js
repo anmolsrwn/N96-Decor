@@ -882,7 +882,7 @@
      ========================================================= */
   if (page === "founders") {
     var fi = N96.foundersIntro || {};
-    $("#founders-intro").innerHTML = '<span class="eyebrow">About us</span><h1>' + esc(fi.heading || "Our Founders") + '</h1><p>' + esc(fi.text || "") + '</p>' +
+    $("#founders-intro").innerHTML = '<h1>' + esc(fi.heading || "Our Founders") + '</h1><p>' + esc(fi.text || "") + '</p>' +
       '<div class="founder-jump">' + N96.founders.map(function (f) { return '<a class="chip" href="#' + f.id + '">' + esc(f.name) + '</a>'; }).join("") + '</div>';
     $("#founders-list").innerHTML = N96.founders.map(function (f) {
       return '<article class="founder-profile" id="' + f.id + '">' +

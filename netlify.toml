@@ -1,3 +1,9 @@
 [build]
   publish = "."
   command = "echo 'Static site ready'"
+
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true

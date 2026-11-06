@@ -132,21 +132,31 @@
     return '<div class="icon-row ' + (cls || "") + '">' + html + '</div>';
   }
 
+  var isFile = location.protocol === "file:";
+  var homeUrl = isFile ? "index.html" : "/";
+  var contactUrl = page === "home" ? "#contact" : (isFile ? "index.html#contact" : "/#contact");
+
+  // Clean URL: automatically remove "/index.html" from the browser address bar
+  if (!isFile && location.pathname.endsWith("/index.html")) {
+    var cleanPath = location.pathname.replace(/\/index\.html$/, "/") + location.search + location.hash;
+    try { history.replaceState(null, "", cleanPath); } catch (e) {}
+  }
+
   /* ---------- Header ---------- */
   // Tabs in the top menu (centre). Contact sits on the right.
   var NAV = [
-    ["home", "index.html", "Home"],
+    ["home", homeUrl, "Home"],
     ["gallery", "gallery.html", "Gallery"]
   ];
   // All pages, used in the footer (Projects, Services, Join Us stay reachable here and on the home page)
   var ALL_PAGES = [
-    ["home", "index.html", "Home"],
+    ["home", homeUrl, "Home"],
     ["about", "founders.html", "About / Founders"],
     ["services", "services.html", "Services"],
     ["projects", "projects.html", "Projects"],
     ["gallery", "gallery.html", "Gallery"],
     ["join", "join.html", "Join Us"],
-    ["contact", "index.html#contact", "Contact"]
+    ["contact", contactUrl, "Contact"]
   ];
   /* ---------- Every page opens from the top (unless the link points to a section, e.g. #contact) ---------- */
   function jumpToTop() {
@@ -180,12 +190,12 @@
       '<div class="wrap nav">' +
         // Logo at top-left (file: images/brand/logo-top.png)
         '<div class="nav-left">' +
-          '<a class="nav-logo" href="index.html" aria-label="N96 Decor home"><img src="images/brand/logo-top.png" alt="N96 Decor logo" width="58" height="68"></a>' +
+          '<a class="nav-logo" href="' + homeUrl + '" aria-label="N96 Decor home"><img src="images/brand/logo-top.png" alt="N96 Decor logo" width="58" height="68"></a>' +
         '</div>' +
         '<div class="nav-center">' +
-          '<a class="brand" href="index.html"><span class="brand-name">N96 DECOR</span></a>' +
+          '<a class="brand" href="' + homeUrl + '"><span class="brand-name">N96 DECOR</span></a>' +
           '<ul class="nav-links">' +
-            NAV.concat([["contact", page === "home" ? "#contact" : "index.html#contact", "Contact"]]).map(function (n) {
+            NAV.concat([["contact", contactUrl, "Contact"]]).map(function (n) {
               return '<li><a href="' + n[1] + '"' + (n[0] === current ? ' class="active" aria-current="page"' : "") + '>' + n[2] + '</a></li>';
             }).join("") +
           '</ul>' +
@@ -224,7 +234,7 @@
     footerEl.innerHTML =
       '<div class="wrap">' +
         '<div class="footer-grid">' +
-          '<a class="footer-brand" href="index.html" aria-label="N96 Decor home">' +
+          '<a class="footer-brand" href="' + homeUrl + '" aria-label="N96 Decor home">' +
             '<img src="images/brand/logo-top.png" alt="">' +
             '<span class="brand-name">N96 DECOR</span>' +
           '</a>' +
@@ -632,7 +642,7 @@
     // Menu: highlight "Contact" while the contact section is on screen, "Home" otherwise
     var contactSec = document.getElementById("contact");
     if (contactSec && "IntersectionObserver" in window) {
-      var homeTab = $('.nav-links a[href="index.html"]'), contactTab = $('.nav-links a[href="#contact"]');
+      var homeTab = $('.nav-links a[href="' + homeUrl + '"]') || $('.nav-links a[href="index.html"]'), contactTab = $('.nav-links a[href="#contact"]');
       new IntersectionObserver(function (entries) {
         var on = entries[0].isIntersecting;
         if (homeTab) homeTab.classList.toggle("active", !on);
@@ -702,7 +712,7 @@
       var photos = photoList(p);
 
       $("#detail-hero").innerHTML = '<img src="' + photoUrl(p, 1) + '" alt="' + esc(p.title) + '">' +
-        '<div class="crumbs"><div class="wrap"><a href="index.html">Home</a> &nbsp;/&nbsp; <a href="projects.html">Projects</a> &nbsp;/&nbsp; ' + esc(p.title) + '</div></div>';
+        '<div class="crumbs"><div class="wrap"><a href="' + homeUrl + '">Home</a> &nbsp;/&nbsp; <a href="projects.html">Projects</a> &nbsp;/&nbsp; ' + esc(p.title) + '</div></div>';
 
       if ($("#detail-types")) buildChips($("#detail-types"), null, p.category, true);
 
